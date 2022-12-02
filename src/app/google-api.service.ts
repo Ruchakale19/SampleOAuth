@@ -7,20 +7,27 @@ import { Observable, Subject } from 'rxjs';
 
 const authCodeFlowConfig: AuthConfig = {
   // Url of the Identity Provider
-  issuer: 'https://accounts.google.com',
+  issuer: 'https://accounts.google.com', 
+
+  //issuer: 'https://www.facebook.com', 
 
   // strict discovery document disallows urls which not start with issuers url
   strictDiscoveryDocumentValidation: false,
 
   // URL of the SPA to redirect the user to after login
-  redirectUri: "https://Ruchakale19.github.io/SampleOAuth",
+  redirectUri: window.location.origin,
+
+  // redirectUri: "https://Ruchakale19.github.io/SampleOAuth",
 
   // The SPA's id. The SPA is registerd with this id at the auth-server
   // clientId: 'server.code',
   clientId: '826987719199-iinqka4ifi5rrplj7ucckeuo7o4k2c0c.apps.googleusercontent.com',
 
   // set the scope for the permissions the client should request
-  scope: 'openid profile email https://www.googleapis.com/auth/gmail.readonly',
+  // scope: 'openid profile email https://www.googleapis.com/auth/gmail.readonly',
+
+  scope: 'openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile',
+
 
   showDebugInformation: true,
 };
