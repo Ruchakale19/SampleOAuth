@@ -17,7 +17,7 @@ const authCodeFlowConfig: AuthConfig = {
   // URL of the SPA to redirect the user to after login
   // redirectUri: window.location.origin,
 
-  redirectUri: "https://Ruchakale19.github.io/SampleOAuth https://ruchakale19.github.io/SampleOAuth/",
+  redirectUri: "https://ruchakale19.github.io/SampleOAuth/",
   
 
   // The SPA's id. The SPA is registerd with this id at the auth-server
